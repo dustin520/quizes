@@ -29,14 +29,15 @@ Person.prototype.wakeUp = function() {
   }
 };
 
+var dustin = new Student("")
+dustin.name = "dustin"
 
 var Student = function(name, height, age, sleeping, studying) {
   this.studying = false; 
 
 }
 
-Student.prototype = Object.create(Person.prototype);
-Student.prototype.constructor = Student;
+// Student.prototype = Object.create(Person.prototype); // not sure if this is right or just the old way 
 
 Student.prototype = new Person()
 Student.prototype.constructor = Student;
